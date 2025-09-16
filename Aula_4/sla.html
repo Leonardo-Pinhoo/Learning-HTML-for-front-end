@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FORMULÁRIO HORRÍVEL</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+        
+        body {
+            background: linear-gradient(45deg, #ff00ff, #00ff00, #ffff00, #ff0000, #00ffff);
+            background-size: 400% 400%;
+            animation: rainbow 2s linear infinite;
+            font-family: 'Comic Neue', cursive;
+            margin: 0;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+        
+        @keyframes rainbow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: repeating-linear-gradient(
+                45deg,
+                #ff6b6b,
+                #ff6b6b 10px,
+                #4ecdc4 10px,
+                #4ecdc4 20px,
+                #45b7d1 20px,
+                #45b7d1 30px
+            );
+            border: 15px solid #ff1493;
+            border-radius: 50px 20px 50px 20px;
+            padding: 30px;
+            box-shadow: 20px 20px 0px #ff4500, -20px -20px 0px #9400d3;
+            transform: rotate(-2deg);
+            animation: shake 1s infinite;
+        }
+        
+        @keyframes shake {
+            0%, 100% { transform: rotate(-2deg) translateX(0px); }
+            25% { transform: rotate(2deg) translateX(-2px); }
+            50% { transform: rotate(-2deg) translateX(2px); }
+            75% { transform: rotate(1deg) translateX(-1px); }
+        }
+        
+        h1 {
+            color: #ff0000;
+            text-shadow: 3px 3px 0px #00ff00, 6px 6px 0px #0000ff;
+            font-size: 3em;
+            text-align: center;
+            transform: rotate(5deg);
+            animation: blink 0.5s infinite alternate;
+            background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 10px;
+        }
+        
+        @keyframes blink {
+            0% { opacity: 1; }
+            100% { opacity: 0.3; }
+        }
+        
+        .form-group {
+            margin: 25px 0;
+            background: radial-gradient(circle, #ffff00, #ff00ff);
+            padding: 15px;
+            border: 8px dotted #00ff00;
+            border-radius: 25px 5px 25px 5px;
+            position: relative;
+        }
+        
+        .form-group::before {
+            content: "★";
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            font-size: 2em;
+            color: #ff0000;
+            animation: spin 2s linear infinite;
+        }
+        
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        label {
+            display: block;
+            color: #8b0000;
+            font-weight: bold;
+            font-size: 1.5em;
+            text-shadow: 2px 2px 4px #ffff00;
+            margin-bottom: 10px;
+            transform: skew(-10deg);
+            background: linear-gradient(90deg, #ff4500, #9400d3);
+            padding: 5px;
+            border-radius: 10px;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 15px;
+            border: 5px solid #ff69b4;
+            border-radius: 20px 5px 20px 5px;
+            background: linear-gradient(135deg, #ffa500, #32cd32, #ff1493);
+            color: #000080;
+            font-size: 1.2em;
+            font-weight: bold;
+            box-shadow: inset 5px 5px 10px #ff0000, inset -5px -5px 10px #00ff00;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border: 5px solid #ff0000;
+            background: linear-gradient(45deg, #ffff00, #ff00ff, #00ffff);
+            animation: wiggle 0.3s infinite;
+        }
+        
+        @keyframes wiggle {
+            0% { transform: rotate(0deg); }
+            25% { transform: rotate(2deg); }
+            50% { transform: rotate(0deg); }
+            75% { transform: rotate(-2deg); }
+            100% { transform: rotate(0deg); }
+        }
+        
+        .checkbox-group {
+            background: conic-gradient(#ff0000, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff, #ff0000);
+            padding: 20px;
+            border-radius: 50%;
+            margin: 20px 0;
+        }
+        
+        .checkbox-item {
+            margin: 15px 0;
+            font-size: 1.3em;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px #000000;
+        }
+        
+        input[type="checkbox"] {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(45deg, #ff0000, #ff4500, #ffa500, #ffff00, #9acd32, #00ff00, #00ffff, #0000ff, #8b00ff, #ff00ff);
+            background-size: 1000% 1000%;
+            border: 8px solid #000000;
+            color: #ffffff;
+            padding: 20px 40px;
+            font-size: 2em;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            text-shadow: 3px 3px 6px #000000;
+            animation: rainbow-btn 1s linear infinite, bounce 2s infinite;
+            margin: 30px auto;
+            display: block;
+            transform: rotate(-3deg);
+            box-shadow: 10px 10px 20px rgba(0,0,0,0.5), inset -5px -5px 10px rgba(255,255,255,0.3);
+        }
+        
+        @keyframes rainbow-btn {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: rotate(-3deg) translateY(0); }
+            40% { transform: rotate(-3deg) translateY(-20px); }
+            60% { transform: rotate(-3deg) translateY(-10px); }
+        }
+        
+        .submit-btn:hover {
+            animation: rainbow-btn 0.2s linear infinite, shake-btn 0.1s infinite;
+            font-size: 2.5em;
+        }
+        
+        @keyframes shake-btn {
+            0% { transform: rotate(-3deg) translate(0px, 0px); }
+            25% { transform: rotate(3deg) translate(5px, 5px); }
+            50% { transform: rotate(-3deg) translate(-5px, 5px); }
+            75% { transform: rotate(3deg) translate(5px, -5px); }
+            100% { transform: rotate(-3deg) translate(0px, 0px); }
+        }
+        
+        .warning {
+            background: repeating-linear-gradient(
+                90deg,
+                #ff0000 0px,
+                #ff0000 20px,
+                #ffff00 20px,
+                #ffff00 40px
+            );
+            color: #000000;
+            padding: 15px;
+            margin: 20px 0;
+            border: 10px double #ff00ff;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-align: center;
+            animation: flash 0.5s infinite;
+        }
+        
+        @keyframes flash {
+            0% { background-position: 0px; }
+            100% { background-position: 40px; }
+        }
+        
+        .sparkles {
+            position: fixed;
+            pointer-events: none;
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(circle, #ffff00, #ff00ff);
+            border-radius: 50%;
+            animation: sparkle 3s linear infinite;
+        }
+        
+        @keyframes sparkle {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-20px) rotate(360deg); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌈 FORMULÁRIO HORRÍVEL 🌈</h1>
+        
+        <div class="warning">
+            ⚠️ AVISO: ESTE FORMULÁRIO PODE CAUSAR DANOS OCULARES ⚠️
+        </div>
+        
+        <form id="uglyForm">
+            <div class="form-group">
+                <label for="nome">💀 SEU NOME (obrigatório ou explode) 💀</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite aqui seu nome..." required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">📧 EMAIL (para spam infinito) 📧</label>
+                <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com">
+            </div>
+            
+            <div class="form-group">
+                <label for="idade">🎂 SUA IDADE (em anos da Terra) 🎂</label>
+                <input type="number" id="idade" name="idade" min="0" max="150" placeholder="999">
+            </div>
+            
+            <div class="form-group">
+                <label for="cor">🎨 COR FAVORITA (para tornar ainda mais feio) 🎨</label>
+                <select id="cor" name="cor">
+                    <option value="">Escolha uma cor...</option>
+                    <option value="rosa-choque">Rosa Choque</option>
+                    <option value="verde-neon">Verde Neon</option>
+                    <option value="amarelo-gritante">Amarelo Gritante</option>
+                    <option value="laranja-radioativo">Laranja Radioativo</option>
+                    <option value="roxo-alienígena">Roxo Alienígena</option>
+                </select>
+            </div>
+            
+            <div class="form-group checkbox-group">
+                <label>🤢 COISAS HORRÍVEIS QUE VOCÊ GOSTA 🤢</label>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="pineapple" name="gostos" value="abacaxi-pizza">
+                    <label for="pineapple">Abacaxi na pizza</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="comic-sans" name="gostos" value="comic-sans">
+                    <label for="comic-sans">Fonte Comic Sans</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="auto-play" name="gostos" value="musica-autoplay">
+                    <label for="auto-play">Música que toca sozinha em sites</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="pop-ups" name="gostos" value="pop-ups">
+                    <label for="pop-ups">Pop-ups infinitos</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="mensagem">💬 DEIXE SUA MENSAGEM DE ÓDIO 💬</label>
+                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva aqui o quanto este formulário é horrível..."></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">
+                🚀 ENVIAR PARA O INFERNO 🚀
+            </button>
+        </form>
+    </div>
+
+    <script>
+        // Criar estrelinhas caindo
+        function createSparkle() {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkles';
+            sparkle.style.left = Math.random() * 100 + 'vw';
+            sparkle.style.animationDelay = Math.random() * 3 + 's';
+            document.body.appendChild(sparkle);
+            
+            setTimeout(() => {
+                sparkle.remove();
+            }, 3000);
+        }
+        
+        setInterval(createSparkle, 300);
+        
+        // Formulário
+        document.getElementById('uglyForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Coletar dados
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const idade = document.getElementById('idade').value;
+            const cor = document.getElementById('cor').value;
+            const gostos = Array.from(document.querySelectorAll('input[name="gostos"]:checked')).map(cb => cb.value);
+            const mensagem = document.getElementById('mensagem').value;
+            
+            // Mostrar alerta horrível
+            alert('🎉 PARABÉNS! 🎉\nVocê sobreviveu ao formulário mais feio da internet!\n\n' +
+                  'Dados coletados:\n' +
+                  'Nome: ' + (nome || 'Não informado') + '\n' +
+                  'Email: ' + (email || 'Não informado') + '\n' +
+                  'Idade: ' + (idade || 'Não informado') + '\n' +
+                  'Cor favorita: ' + (cor || 'Não escolhida') + '\n' +
+                  'Gostos duvidosos: ' + (gostos.length > 0 ? gostos.join(', ') : 'Nenhum') + '\n' +
+                  'Mensagem: ' + (mensagem || 'Nenhuma mensagem'));
+        });
+        
+        // Efeitos sonoros falsos (apenas console)
+        document.querySelectorAll('input, select, textarea').forEach(element => {
+            element.addEventListener('focus', () => {
+                console.log('🔊 *som irritante de foco*');
+            });
+        });
+        
+        document.querySelector('.submit-btn').addEventListener('click', () => {
+            console.log('🔊 *explosão de fogos de artifício*');
+        });
+    </script>
+</body>
+</html>
